@@ -31,6 +31,14 @@
 		1A0000000000000000000055 /* InterventionDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000054 /* InterventionDeckView.swift */; };
 		1A0000000000000000000057 /* EditQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000056 /* EditQuestionsView.swift */; };
 		1A0000000000000000000059 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000058 /* HabitDetailView.swift */; };
+		1A0000000000000000000071 /* StreaksWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000070 /* StreaksWidgetBundle.swift */; };
+		1A0000000000000000000073 /* StreaksWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000072 /* StreaksWidget.swift */; };
+		1A0000000000000000000076 /* AppGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000000000000000002A /* AppGroup.swift */; };
+		1A0000000000000000000077 /* StreakMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000000000000000002E /* StreakMath.swift */; };
+		1A0000000000000000000078 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000000000000000002C /* PersistenceController.swift */; };
+		1A0000000000000000000079 /* InterventionOutcome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000028 /* InterventionOutcome.swift */; };
+		1A000000000000000000007A /* Streaks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000035 /* Streaks.xcdatamodeld */; };
+		1A000000000000000000006C /* StreaksWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000061 /* StreaksWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +68,11 @@
 		1A0000000000000000000054 /* InterventionDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionDeckView.swift; sourceTree = "<group>"; };
 		1A0000000000000000000056 /* EditQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionsView.swift; sourceTree = "<group>"; };
 		1A0000000000000000000058 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
+		1A0000000000000000000061 /* StreaksWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = StreaksWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A0000000000000000000070 /* StreaksWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksWidgetBundle.swift; sourceTree = "<group>"; };
+		1A0000000000000000000072 /* StreaksWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreaksWidget.swift; sourceTree = "<group>"; };
+		1A0000000000000000000074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A0000000000000000000075 /* StreaksWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StreaksWidget.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,13 +83,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1A0000000000000000000063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1A0000000000000000000069 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1A000000000000000000006C /* StreaksWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXGroup section */
 		1A0000000000000000000002 = {
 			isa = PBXGroup;
 			children = (
 				1A0000000000000000000010 /* ios_frontend */,
+				1A0000000000000000000068 /* StreaksWidget */,
 				1A0000000000000000000003 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,8 +120,20 @@
 			isa = PBXGroup;
 			children = (
 				1A0000000000000000000005 /* Streaks.app */,
+				1A0000000000000000000061 /* StreaksWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0000000000000000000068 /* StreaksWidget */ = {
+			isa = PBXGroup;
+			children = (
+				1A0000000000000000000070 /* StreaksWidgetBundle.swift */,
+				1A0000000000000000000072 /* StreaksWidget.swift */,
+				1A0000000000000000000074 /* Info.plist */,
+				1A0000000000000000000075 /* StreaksWidget.entitlements */,
+			);
+			path = StreaksWidget;
 			sourceTree = "<group>";
 		};
 		1A0000000000000000000010 /* ios_frontend */ = {
@@ -179,17 +226,54 @@
 				1A0000000000000000000006 /* Sources */,
 				1A0000000000000000000007 /* Frameworks */,
 				1A0000000000000000000008 /* Resources */,
+				1A0000000000000000000069 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1A000000000000000000006A /* PBXTargetDependency */,
 			);
 			name = Streaks;
 			productName = Streaks;
 			productReference = 1A0000000000000000000005 /* Streaks.app */;
 			productType = "com.apple.product-type.application";
 		};
+		1A0000000000000000000060 /* StreaksWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A0000000000000000000065 /* Build configuration list for PBXNativeTarget "StreaksWidgetExtension" */;
+			buildPhases = (
+				1A0000000000000000000062 /* Sources */,
+				1A0000000000000000000063 /* Frameworks */,
+				1A0000000000000000000064 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreaksWidgetExtension;
+			productName = StreaksWidgetExtension;
+			productReference = 1A0000000000000000000061 /* StreaksWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
+
+/* Begin PBXContainerItemProxy section */
+		1A000000000000000000006B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1A0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A0000000000000000000060;
+			remoteInfo = StreaksWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXTargetDependency section */
+		1A000000000000000000006A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A0000000000000000000060 /* StreaksWidgetExtension */;
+			targetProxy = 1A000000000000000000006B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXProject section */
 		1A0000000000000000000001 /* Project object */ = {
@@ -200,6 +284,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					1A0000000000000000000004 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					1A0000000000000000000060 = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -218,6 +305,7 @@
 			projectRoot = "";
 			targets = (
 				1A0000000000000000000004 /* Streaks */,
+				1A0000000000000000000060 /* StreaksWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -228,6 +316,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0000000000000000000033 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0000000000000000000064 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +356,20 @@
 				1A0000000000000000000055 /* InterventionDeckView.swift in Sources */,
 				1A0000000000000000000057 /* EditQuestionsView.swift in Sources */,
 				1A0000000000000000000059 /* HabitDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1A0000000000000000000062 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A0000000000000000000071 /* StreaksWidgetBundle.swift in Sources */,
+				1A0000000000000000000073 /* StreaksWidget.swift in Sources */,
+				1A000000000000000000007A /* Streaks.xcdatamodeld in Sources */,
+				1A0000000000000000000078 /* PersistenceController.swift in Sources */,
+				1A0000000000000000000076 /* AppGroup.swift in Sources */,
+				1A0000000000000000000077 /* StreakMath.swift in Sources */,
+				1A0000000000000000000079 /* InterventionOutcome.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +547,73 @@
 			};
 			name = Release;
 		};
+		1A0000000000000000000066 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = StreaksWidget/StreaksWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreaksWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Streaks;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jordantam.streaks.StreaksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1A0000000000000000000067 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_ENTITLEMENTS = StreaksWidget/StreaksWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StreaksWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Streaks;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jordantam.streaks.StreaksWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,6 +631,15 @@
 			buildConfigurations = (
 				1A000000000000000000000D /* Debug */,
 				1A000000000000000000000E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A0000000000000000000065 /* Build configuration list for PBXNativeTarget "StreaksWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A0000000000000000000066 /* Debug */,
+				1A0000000000000000000067 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
