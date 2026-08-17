@@ -19,5 +19,5 @@ Pods/
 Carthage/Build/
 build/
 
-# Handoff docs are kept locally (in ~/Downloads), never committed
-docs/HANDOFF_*.md
+# Handoff docs live in handoffs/ but are never committed
+handoffs/
