@@ -1,12 +1,11 @@
 import CoreData
 import SwiftUI
 
-/// Drives the Home screen for the primary habit. The big day number is read live
-/// from the observed `Habit`; the resisted tally is a derived count refreshed after
-/// an intervention finishes.
+/// Backs Habit Detail: the derived tallies and the reset history list.
 @MainActor
-final class HomeViewModel: ObservableObject {
+final class HabitDetailViewModel: ObservableObject {
     @Published private(set) var timesResisted: Int = 0
+    @Published private(set) var history: [ResetEvent] = []
 
     private let repository: HabitRepository
     private let habit: Habit
@@ -19,5 +18,6 @@ final class HomeViewModel: ObservableObject {
 
     func refresh() {
         timesResisted = repository.resistedCount(for: habit)
+        history = repository.resetHistory(for: habit)
     }
 }

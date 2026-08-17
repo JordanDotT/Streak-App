@@ -17,3 +17,7 @@ xcuserdata/
 # CocoaPods / Carthage (unused today; ignored pre-emptively)
 Pods/
 Carthage/Build/
+build/
+
+# Handoff docs are kept locally (in ~/Downloads), never committed
+docs/HANDOFF_*.md

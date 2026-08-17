@@ -1,8 +1,8 @@
 # Streaks
 
 A streak counter for breaking bad habits, with a built-in "talk me out of it"
-intervention deck. iOS, SwiftUI, on-device-first. See the full spec in
-[`docs/HANDOFF_01_streak_app.md`](docs/HANDOFF_01_streak_app.md).
+intervention deck. iOS, SwiftUI, on-device-first. The full spec lives in the handoff
+docs, which are kept locally (not committed to this repo).
 
 ## Status
 
@@ -40,7 +40,6 @@ ios_frontend/
   ViewModels/   MVVM view models
   Utilities/    App Group, persistence, streak math, question provider
   Resources/    Assets
-docs/           Handoff spec
 ```
 
 ## Conventions

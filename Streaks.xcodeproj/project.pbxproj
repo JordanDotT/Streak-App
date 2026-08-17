@@ -18,6 +18,19 @@
 		1A0000000000000000000031 /* QuestionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000030 /* QuestionProvider.swift */; };
 		1A0000000000000000000033 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000032 /* Assets.xcassets */; };
 		1A0000000000000000000037 /* Streaks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000035 /* Streaks.xcdatamodeld */; };
+		1A0000000000000000000041 /* HabitCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000040 /* HabitCategory.swift */; };
+		1A0000000000000000000043 /* HabitRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000042 /* HabitRepository.swift */; };
+		1A0000000000000000000045 /* CreateHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000044 /* CreateHabitViewModel.swift */; };
+		1A0000000000000000000047 /* SlipController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000046 /* SlipController.swift */; };
+		1A0000000000000000000049 /* InterventionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000048 /* InterventionViewModel.swift */; };
+		1A000000000000000000004B /* EditQuestionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000000000000000004A /* EditQuestionsViewModel.swift */; };
+		1A000000000000000000004D /* HabitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000000000000000004C /* HabitDetailViewModel.swift */; };
+		1A000000000000000000004F /* CreateHabitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A000000000000000000004E /* CreateHabitView.swift */; };
+		1A0000000000000000000051 /* SlipSnackbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000050 /* SlipSnackbar.swift */; };
+		1A0000000000000000000053 /* SwipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000052 /* SwipeCard.swift */; };
+		1A0000000000000000000055 /* InterventionDeckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000054 /* InterventionDeckView.swift */; };
+		1A0000000000000000000057 /* EditQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000056 /* EditQuestionsView.swift */; };
+		1A0000000000000000000059 /* HabitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0000000000000000000058 /* HabitDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +47,19 @@
 		1A0000000000000000000032 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A0000000000000000000034 /* Streaks.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Streaks.entitlements; sourceTree = "<group>"; };
 		1A0000000000000000000036 /* Streaks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Streaks.xcdatamodel; sourceTree = "<group>"; };
+		1A0000000000000000000040 /* HabitCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCategory.swift; sourceTree = "<group>"; };
+		1A0000000000000000000042 /* HabitRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitRepository.swift; sourceTree = "<group>"; };
+		1A0000000000000000000044 /* CreateHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitViewModel.swift; sourceTree = "<group>"; };
+		1A0000000000000000000046 /* SlipController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipController.swift; sourceTree = "<group>"; };
+		1A0000000000000000000048 /* InterventionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionViewModel.swift; sourceTree = "<group>"; };
+		1A000000000000000000004A /* EditQuestionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionsViewModel.swift; sourceTree = "<group>"; };
+		1A000000000000000000004C /* HabitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewModel.swift; sourceTree = "<group>"; };
+		1A000000000000000000004E /* CreateHabitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitView.swift; sourceTree = "<group>"; };
+		1A0000000000000000000050 /* SlipSnackbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlipSnackbar.swift; sourceTree = "<group>"; };
+		1A0000000000000000000052 /* SwipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCard.swift; sourceTree = "<group>"; };
+		1A0000000000000000000054 /* InterventionDeckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterventionDeckView.swift; sourceTree = "<group>"; };
+		1A0000000000000000000056 /* EditQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuestionsView.swift; sourceTree = "<group>"; };
+		1A0000000000000000000058 /* HabitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1A0000000000000000000028 /* InterventionOutcome.swift */,
+				1A0000000000000000000040 /* HabitCategory.swift */,
 				1A0000000000000000000035 /* Streaks.xcdatamodeld */,
 			);
 			path = Models;
@@ -99,6 +126,12 @@
 			children = (
 				1A0000000000000000000022 /* ContentView.swift */,
 				1A0000000000000000000024 /* HomeView.swift */,
+				1A000000000000000000004E /* CreateHabitView.swift */,
+				1A0000000000000000000058 /* HabitDetailView.swift */,
+				1A0000000000000000000054 /* InterventionDeckView.swift */,
+				1A0000000000000000000052 /* SwipeCard.swift */,
+				1A0000000000000000000050 /* SlipSnackbar.swift */,
+				1A0000000000000000000056 /* EditQuestionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +140,11 @@
 			isa = PBXGroup;
 			children = (
 				1A0000000000000000000026 /* HomeViewModel.swift */,
+				1A0000000000000000000044 /* CreateHabitViewModel.swift */,
+				1A000000000000000000004C /* HabitDetailViewModel.swift */,
+				1A0000000000000000000048 /* InterventionViewModel.swift */,
+				1A000000000000000000004A /* EditQuestionsViewModel.swift */,
+				1A0000000000000000000046 /* SlipController.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -118,6 +156,7 @@
 				1A000000000000000000002C /* PersistenceController.swift */,
 				1A000000000000000000002E /* StreakMath.swift */,
 				1A0000000000000000000030 /* QuestionProvider.swift */,
+				1A0000000000000000000042 /* HabitRepository.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -209,6 +248,19 @@
 				1A000000000000000000002F /* StreakMath.swift in Sources */,
 				1A0000000000000000000031 /* QuestionProvider.swift in Sources */,
 				1A0000000000000000000037 /* Streaks.xcdatamodeld in Sources */,
+				1A0000000000000000000041 /* HabitCategory.swift in Sources */,
+				1A0000000000000000000043 /* HabitRepository.swift in Sources */,
+				1A0000000000000000000045 /* CreateHabitViewModel.swift in Sources */,
+				1A0000000000000000000047 /* SlipController.swift in Sources */,
+				1A0000000000000000000049 /* InterventionViewModel.swift in Sources */,
+				1A000000000000000000004B /* EditQuestionsViewModel.swift in Sources */,
+				1A000000000000000000004D /* HabitDetailViewModel.swift in Sources */,
+				1A000000000000000000004F /* CreateHabitView.swift in Sources */,
+				1A0000000000000000000051 /* SlipSnackbar.swift in Sources */,
+				1A0000000000000000000053 /* SwipeCard.swift in Sources */,
+				1A0000000000000000000055 /* InterventionDeckView.swift in Sources */,
+				1A0000000000000000000057 /* EditQuestionsView.swift in Sources */,
+				1A0000000000000000000059 /* HabitDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

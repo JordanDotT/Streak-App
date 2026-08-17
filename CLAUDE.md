@@ -22,7 +22,13 @@ Guidance for Claude Code when working in this repo.
   (e.g. the swipe deck), but never written to and never coupled (no shared
   package/source). Re-implement fresh here.
 
+## Handoff docs
+- **Handoffs never go in the repo.** They are kept locally in `~/Downloads` (e.g.
+  `HANDOFF_01_streak_app.md`) and are gitignored here as a safety net.
+- A results/summary doc for a handoff shares that handoff's number, not a new one:
+  `HANDOFF_01_results.md` summarizes `HANDOFF_01`.
+
 ## Project layout
 - SwiftUI, iOS 17+, Core Data, MVVM. Source under
   `ios_frontend/{App,Models,Views,ViewModels,Utilities,Resources}`.
-- Full spec: `docs/HANDOFF_01_streak_app.md`.
+- Full spec: the HANDOFF_01 handoff doc (kept locally in `~/Downloads`).
