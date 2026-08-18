@@ -2,8 +2,8 @@ import CoreData
 import SwiftUI
 
 /// Backs the "Talk me out of it" deck. Builds the card list from the habit's
-/// user-defined prompts (via the `QuestionProvider` seam) plus an optional stakes
-/// card, tracks progress, and logs the resisted outcome.
+/// category default prompts and user-defined prompts (via the `QuestionProvider`
+/// seam) plus an optional stakes card, tracks progress, and logs the resisted outcome.
 @MainActor
 final class InterventionViewModel: ObservableObject {
     enum Phase {
@@ -23,7 +23,11 @@ final class InterventionViewModel: ObservableObject {
         self.repository = HabitRepository(context: context)
         self.habit = habit
 
-        let provider: QuestionProvider = CoreDataQuestionProvider(context: context)
+        // Deck = category's bundled defaults, then the user's custom prompts (§A).
+        let provider: QuestionProvider = CompositeQuestionProvider(providers: [
+            BundledQuestionProvider(),
+            CoreDataQuestionProvider(context: context)
+        ])
         var prompts = provider.questions(for: habit)
 
         // Seed a stakes card first when there's a streak on the line (§5.3).

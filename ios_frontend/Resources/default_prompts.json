@@ -1,0 +1,46 @@
+{
+  "spending": [
+    "Are you sure you actually want this?",
+    "Will you remember buying this in a month?",
+    "Could this money go toward something you already want more?",
+    "If it were twice the price, would you still buy it?",
+    "Is this a want dressed up as a need?",
+    "Walk away for an hour — is it still worth it then?",
+    "How many hours of work does this cost you?",
+    "Would past-you be proud of this purchase, or just entertained?"
+  ],
+  "substances": [
+    "What are you actually trying to feel right now?",
+    "How will you feel about this tomorrow morning?",
+    "Is this the version of you that you want to be?",
+    "What set this craving off — and can you sit with it instead?",
+    "You've made it this far. Is now really the time to reset?",
+    "What would you tell a friend in this exact moment?"
+  ],
+  "social": [
+    "What are you really looking for by opening this?",
+    "Will this leave you feeling better or emptier?",
+    "Is there something you're avoiding right now?",
+    "How do you want to have spent this hour?",
+    "Nothing new is waiting for you. What else could you do?",
+    "Put the phone down for five minutes first — still want it?"
+  ],
+  "food": [
+    "Are you hungry, or is it something else?",
+    "How will your body feel an hour from now?",
+    "Would a glass of water change anything right now?",
+    "Is this a craving or a real appetite?",
+    "What are you actually in the mood for underneath this?",
+    "You've been doing well. Is this worth the reset?"
+  ],
+  "generic": [
+    "What are you actually feeling right now?",
+    "Will you be glad you did this tomorrow?",
+    "Is this the version of you that you want to be?",
+    "You've made it this far — is now the time to reset?",
+    "What set this off, and can you sit with it instead?",
+    "What would you tell a friend in this exact moment?",
+    "Wait five minutes. Do you still want it?",
+    "What's the thing you actually want more than this?"
+  ]
+}
