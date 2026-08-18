@@ -1,13 +1,16 @@
 import CoreData
 import SwiftUI
 
-/// First-run onboarding: name the habit, pick a category, set a start date.
-/// Creating the habit flips `ContentView`'s fetch and reveals Home.
+/// The habit form. In create mode it's first-run onboarding — saving flips
+/// `ContentView`'s fetch and reveals Home. In edit mode (`habit` supplied) it's
+/// presented over Habit Detail, saving/deleting then dismisses (§B).
 struct CreateHabitView: View {
+    @Environment(\.dismiss) private var dismiss
     @StateObject private var viewModel: CreateHabitViewModel
+    @State private var showingDeleteConfirmation = false
 
-    init(context: NSManagedObjectContext) {
-        _viewModel = StateObject(wrappedValue: CreateHabitViewModel(context: context))
+    init(context: NSManagedObjectContext, habit: Habit? = nil) {
+        _viewModel = StateObject(wrappedValue: CreateHabitViewModel(context: context, habit: habit))
     }
 
     var body: some View {
@@ -38,20 +41,55 @@ struct CreateHabitView: View {
                     displayedComponents: .date
                 )
             } footer: {
-                Text("Defaults to today. Set it earlier if your streak already started.")
+                Text(viewModel.isEditing
+                     ? "Changing this reshapes your current day count."
+                     : "Defaults to today. Set it earlier if your streak already started.")
             }
 
             Section {
                 Button {
                     viewModel.save()
+                    if viewModel.isEditing { dismiss() }
                 } label: {
-                    Text("Start tracking")
+                    Text(viewModel.isEditing ? "Save changes" : "Start tracking")
                         .frame(maxWidth: .infinity)
                 }
                 .disabled(!viewModel.canSave)
             }
+
+            if viewModel.isEditing {
+                Section {
+                    Button(role: .destructive) {
+                        showingDeleteConfirmation = true
+                    } label: {
+                        Text("Delete habit")
+                            .frame(maxWidth: .infinity)
+                    }
+                }
+            }
         }
-        .navigationTitle("New habit")
+        .navigationTitle(viewModel.isEditing ? "Edit habit" : "New habit")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            if viewModel.isEditing {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("Cancel") { dismiss() }
+                }
+            }
+        }
+        .confirmationDialog(
+            "Delete this habit?",
+            isPresented: $showingDeleteConfirmation,
+            titleVisibility: .visible
+        ) {
+            Button("Delete", role: .destructive) {
+                viewModel.delete()
+                dismiss()
+            }
+            Button("Cancel", role: .cancel) {}
+        } message: {
+            Text("This permanently removes the habit and its history. This can't be undone.")
+        }
     }
 }
 

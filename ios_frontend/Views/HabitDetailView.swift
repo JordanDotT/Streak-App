@@ -8,6 +8,7 @@ struct HabitDetailView: View {
     @StateObject private var viewModel: HabitDetailViewModel
     @StateObject private var slip: SlipController
     @State private var showingDeck = false
+    @State private var showingEdit = false
 
     private let context: NSManagedObjectContext
 
@@ -31,6 +32,16 @@ struct HabitDetailView: View {
     }
 
     var body: some View {
+        // Once the habit is deleted from the edit sheet, ContentView routes back to
+        // onboarding; render nothing in the interim so we never read a deleted object.
+        if habit.isDeleted {
+            Color.clear
+        } else {
+            detail
+        }
+    }
+
+    private var detail: some View {
         List {
             Section {
                 VStack(spacing: 6) {
@@ -92,6 +103,11 @@ struct HabitDetailView: View {
         }
         .navigationTitle(habit.name ?? "Habit")
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) {
+                Button("Edit") { showingEdit = true }
+            }
+        }
         .fullScreenCover(isPresented: $showingDeck) {
             InterventionDeckView(habit: habit, context: context) { outcome in
                 switch outcome {
@@ -101,6 +117,11 @@ struct HabitDetailView: View {
                     slip.slip(habit)
                     viewModel.refresh()
                 }
+            }
+        }
+        .sheet(isPresented: $showingEdit) {
+            NavigationStack {
+                CreateHabitView(context: context, habit: habit)
             }
         }
         .slipSnackbar(slip)

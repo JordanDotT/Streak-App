@@ -42,6 +42,23 @@ struct HabitRepository {
         return habit
     }
 
+    /// Edits the habit's identity fields. `startDate` is written to
+    /// `currentStreakStart` (not `createdAt`) since that's what the day count
+    /// derives from, so moving it deliberately reshapes the current streak (§B).
+    func updateHabit(_ habit: Habit, name: String, category: String?, startDate: Date) {
+        habit.name = name
+        habit.category = category
+        habit.currentStreakStart = startDate
+        save()
+    }
+
+    /// Permanently removes a habit. The model's Cascade delete rules take its
+    /// `ResetEvent`, `InterventionSession`, and `Question` rows with it.
+    func deleteHabit(_ habit: Habit) {
+        context.delete(habit)
+        save()
+    }
+
     // MARK: - Derived values
 
     func currentStreakDays(for habit: Habit) -> Int {
